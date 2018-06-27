@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home_Page.master.cs" Inherits="PresentationLayer.User.Home_Page" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+    <title></title>
+   <style>
+*{margin:0;padding:0;outline:0;}
+.template{width:960px;margin:0 auto;}
+.clear{overflow:hidden;}
+.header{background: #c3c3c3;color: white;height: 120px;}
+.page{height: auto; border: 5px solid #c3c3c3;}
+
+
+.main_body{height:515px;}
+
+.footer{height: 30px;background-color:black;}
+.footer p{color:white;font-family:times new roman; font-size:14px; padding-top:2px;padding-left:360px; border-top:5px solid #c3c3c3;}
+.inner{
+height:115px;border-top:1px solid black;
+border-left:1px solid black;
+border-right:1px solid black;
+border-bottom:1px solid black;}
+.deeper p{
+font-size:40px;
+padding-left:310px;
+padding-top:25px;
+}
+.deeper{
+margin-top:8px;
+margin-left:8px;
+margin-bottom:8px;
+margin-right:8px;
+height:95px;
+border-top:1px solid black;
+border-left:1px solid black;
+border-right:1px solid black;
+border-bottom:1px solid black;
+color:white;
+background-color:black;
+ border-radius: 7px;}
+
+</style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class=" template clear page">
+<!--Header part-->
+	<div class="header  ">
+		<div class="inner">
+		<div class="deeper"><p>  Personal Data Vault</p></div>
+		</div>
+
+	</div>
+<!--Header part-->
+
+<style>
+</style>
+<!--Body part-->
+	<div class="main_body  ">
+	<style>
+	.menu{height:22px;background-color:red;}
+	.menu ul {
+    list-style :none;margin:0 auto;padding:0; color: white;
+
+}
+ .menu ul li{
+
+ margin-left: auto;
+    margin-right: auto;
+        width: 120px;
+        text-align: center;
+        text-decoration: none;
+       line-height: 18px;
+       float: left;
+      position: relative;
+   left: 170px;
+      color: white;
+    }
+	.menu ul li a{
+        text-decoration:none;
+        color: white;
+        display:block;
+        border-radius:10px;
+           font-weight: bold;
+        }
+	    .content {
+            padding-top:40px;
+	    }
+
+    
+	</style>
+		<!--menu Part-->
+		 <div class="menu">
+        <ul>
+            <li><a href="Home_Page.aspx">||&emsp;Home&ensp;|</a> </li>
+            <li><a href="Vault.aspx">Data Vault &ensp;|</a></li>
+             <li><a href="Edit_Profile.aspx">Edit Profile  &ensp;|</a></li>
+            
+            <li><a href="mail_Home.aspx">Mails&ensp;|</a></li>
+            <li><a href="../Home/Login.aspx">Logout&emsp;||</a></li>
+               
+            
+            	
+            
+            
+        </ul>
+    </div>
+        <div class="content">
+
+            <!--START CONTENT -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            <!--END CONTENT -->
+
+    </div><!--menu Part-->
+	</div>
+<!--Body part-->
+
+<!--Footer part-->
+	<div class="footer  ">
+	 <div><p>Personal Data Vault@All Right Reserved</p></div>
+	</div>
+<!--Footer part-->
+
+</div>
+    
+    </form>
+</body>
+</html>
+
