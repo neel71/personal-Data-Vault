@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="H_Page.master.cs" Inherits="PresentationLayer.Home.H_Page" %>
+
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+    <title></title>
+   <style>
+*{margin:0;padding:0;outline:0;}
+.template{width:960px;margin:0 auto;}
+.clear{overflow:hidden;}
+.header{background: #c3c3c3;color: white;height: 120px;}
+.page{height: auto; border: 5px solid #c3c3c3;}
+
+
+.main_body{height:515px;}
+
+.footer{height: 30px;background-color:black;}
+.footer p{color:white;font-family:times new roman; font-size:14px; padding-top:2px;padding-left:360px; border-top:5px solid #c3c3c3;}
+.inner{
+height:115px;border-top:1px solid black;
+border-left:1px solid black;
+border-right:1px solid black;
+border-bottom:1px solid black;}
+.deeper p{
+font-size:40px;
+padding-left:310px;
+padding-top:25px;
+}
+.deeper{
+margin-top:8px;
+margin-left:8px;
+margin-bottom:8px;
+margin-right:8px;
+height:95px;
+border-top:1px solid black;
+border-left:1px solid black;
+border-right:1px solid black;
+border-bottom:1px solid black;
+color:white;
+background-color:black;
+ border-radius: 7px;}
+
+</style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class=" template clear page">
+<!--Header part-->
+	<div class="header  ">
+		<div class="inner">
+		<div class="deeper"><p>  Personal Data Vault</p></div>
+		</div>
+
+	</div>
+<!--Header part-->
+
+<style>
+</style>
+<!--Body part-->
+	<div class="main_body  ">
+	<style>
+	.menu{height:22px;background-color:red;}
+	.menu ul {
+    list-style :none;margin:0 auto;padding:0; color: white;
+
+}
+ .menu ul li{
+
+ margin-left: auto;
+    margin-right: auto;
+        width: 95px;
+        text-align: center;
+        text-decoration: none;
+       line-height: 18px;
+       float: left;
+      position: relative;
+   left: 240px;
+      color: white;
+    }
+	.menu ul li a{
+        text-decoration:none;
+        color: white;
+        display:block;
+        border-radius:10px;
+            
+        }
+	    .content {
+            padding-top:40px;
+	    }
+
+    
+	</style>
+		<!--menu Part-->
+		 <div class="menu">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <asp:Button ID="btnhome" runat="server" Text="||      Home    |" BackColor="Red" Font-Bold="True" ForeColor="White" Height="22px" style="z-index: 1; left: 440px; top: 125px; position: absolute; font-family:times new roman; right: 535px" BorderWidth="0px" Width="70px" PostBackUrl="~/Home/H_page.aspx" />
+                    <asp:Button ID="btnaboutus" runat="server" Text="|       About Us    |" BackColor="Red" BorderWidth="0px" Font-Bold="True" Font-Names="Times New Roman" ForeColor="White" Height="22px" style="z-index: 1; left: 521px; top: 125px; position: absolute; width: 93px;" PostBackUrl="~/Home/A_Us.aspx"  />
+                    <asp:Button ID="btncontactus" runat="server" Text="|       Contact Us    |" BackColor="Red" BorderWidth="0px" Font-Bold="True" Font-Names="Times New Roman" ForeColor="White" Height="22px" style="z-index: 1; left: 623px; top: 125px; position: absolute; width: 106px" />
+            <asp:Button ID="btnsignup" runat="server" Text="      Signup    |" BackColor="Red" BorderWidth="0px" Font-Bold="True" Font-Names="Times New Roman" ForeColor="White" Height="22px" style="z-index: 1; left: 733px; top: 125px; position: absolute" Width="82px" />
+            <asp:Button ID="btnlogin" runat="server" Text="      login    ||" BackColor="Red" BorderWidth="0px" Font-Bold="True" Font-Names="Times New Roman" ForeColor="White" Height="22px" style="z-index: 1; left: 817px; top: 125px; position: absolute; width: 67px;" />
+             </asp:ContentPlaceHolder>
+    </div>
+        <div class="content">
+
+            <!--START CONTENT -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+        </asp:ContentPlaceHolder>
+            <!--END CONTENT -->
+
+    </div><!--menu Part-->
+	</div>
+<!--Body part-->
+
+<!--Footer part-->
+	<div class="footer  ">
+	 <div><p>Personal Data Vault@All Right Reserved</p></div>
+	</div>
+<!--Footer part-->
+
+</div>
+    
+    </form>
+</body>
+</html>
